@@ -32,7 +32,7 @@ This is great for temporarily using pieces of data during your build that you
 don't want to be baked in the final image (SSH keys, signing keys, passwords),
 particularly if you have a build machine with restricted access - security
 people sign off code changes, the build is sent to the machine where restricted
-operations can be performed, operations people take the build knowing there are
+operations can be performed, operations people take the image knowing there are
 no secrets hidden in the build for anyone to stumble across.
 
 The secret server exposes two ports:
