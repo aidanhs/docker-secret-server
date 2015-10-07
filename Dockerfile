@@ -16,6 +16,6 @@ COPY getsecret.sh /getsecret.sh
 COPY start.sh /start.sh
 
 # Not really necessary for our purposes
-EXPOSE 4444 4445
+EXPOSE 80 4444
 ENTRYPOINT []
 CMD ["/start.sh"]

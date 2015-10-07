@@ -18,9 +18,9 @@ have a Dockerfile like this
 ```
 FROM myimage
 
-ADD http://dsecret:4444/getsecret /getsecret
+ADD http://dsecret/getsecret /getsecret
 RUN chmod +x /getsecret
-ENV SECRET /getsecret dsecret:4445
+ENV SECRET /getsecret dsecret:4444
 
 RUN $SECRET adminpassword | hash_tool | add_password_to_db
 RUN $SECRET ssh_key > id_rsa && chmod 600 id_rsa && \
@@ -37,10 +37,10 @@ no secrets hidden in the build for anyone to stumble across.
 
 The secret server exposes two ports:
 
- - port 4444 is a http server with secret values available at `/secrets/$key`
+ - port 80 is a http server with secret values available at `/secrets/$key`
    and a special `/getsecret` endpoint giving a static binary for use with...
- - port 4445, a plain tcp endpoint. You can hit this with the `getsecret`
-   binary, `netcat` (`echo adminpassword | nc -q 10 dsecret 4445`, where `-q 10`
+ - port 4444, a plain tcp endpoint. You can hit this with the `getsecret`
+   binary, `netcat` (`echo adminpassword | nc -q 10 dsecret 4444`, where `-q 10`
    is the required option on Ubuntu 14.04 to make `netcat` wait for a response)
    or even [`bash`](http://www.linuxjournal.com/content/more-using-bashs-built-devtcp-file-tcpip).
 
