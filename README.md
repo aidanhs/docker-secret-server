@@ -46,6 +46,6 @@ The secret server exposes two ports:
 Security
 --------
 
-Tunning this gives anyone else on your machine access to your 'secrets'
+Running this gives anyone else on your machine access to your 'secrets'
 directory.
 
