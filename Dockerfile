@@ -16,4 +16,5 @@ COPY start.sh getsecret.sh /
 
 # Not really necessary for our purposes
 EXPOSE 80 4444
+
 ENTRYPOINT ["/start.sh"]
