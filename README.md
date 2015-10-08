@@ -18,8 +18,7 @@ have a Dockerfile like this
 ```
 FROM myimage
 
-ADD http://dsecret/getsecret /getsecret
-RUN chmod +x /getsecret
+RUN wget -O /getsecret http://dsecret/getsecret && chmod +x /getsecret
 ENV SECRET /getsecret dsecret:4444
 
 RUN $SECRET adminpassword | hash_tool | add_password_to_db
