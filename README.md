@@ -56,3 +56,4 @@ Security
 Running this gives anyone else on your machine access to your 'secrets'
 directory.
 
+If they have the ability to run arbitrary containers, they already had this.
