@@ -45,6 +45,11 @@ The secret server exposes two ports:
    is required on Ubuntu 14.04 to make `netcat` wait for a response)
    or even [`bash`](http://www.linuxjournal.com/content/more-using-bashs-built-devtcp-file-tcpip).
 
+If you get tired of writing SSH keys at the beginning of a step and deleting
+them at the end, take a look at the
+[SSH agent socket](https://github.com/aidanhs/docker-sshagent-socket.git)
+container.
+
 Security
 --------
 
