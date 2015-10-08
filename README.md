@@ -2,8 +2,10 @@ docker-secret-server
 ====================
 
 A really simple (stupid) data server in Docker. Possibly useful for providing
-secrets to containers during a `docker build`.
-
+secrets to containers during a `docker build`, but can serve arbitrary files so
+not necessarily constrained to just that. Useful as an initial demonstration of
+secret sharing that you can extend to anything that exposes a Unix or TCP
+socket.
 
 As of 1.8, names of containers are automatically inserted into /etc/hosts, so
 if you run this container with
