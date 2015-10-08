@@ -12,8 +12,7 @@ RUN cd /srv && \
     \
     rm -r /var/cache/apk/*
 
-COPY getsecret.sh /getsecret.sh
-COPY start.sh /start.sh
+COPY start.sh getsecret.sh /
 
 # Not really necessary for our purposes
 EXPOSE 80 4444
