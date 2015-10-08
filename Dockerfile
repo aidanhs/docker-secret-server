@@ -17,5 +17,4 @@ COPY start.sh /start.sh
 
 # Not really necessary for our purposes
 EXPOSE 80 4444
-ENTRYPOINT []
-CMD ["/start.sh"]
+ENTRYPOINT ["/start.sh"]
